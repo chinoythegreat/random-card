@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int mSpeed = 90;
 
+    private Boolean mClickable = true;
     private int mCount;
     private int mCardNumber;
     private int mCardSuit;
@@ -103,6 +104,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickLayout(final View view) {
+        if(!mClickable) {
+            return;
+        }
+        mClickable = false;
         mCardNumber = new Random().nextInt(14 - 1) + 1;
         mCardSuit = new Random().nextInt(5 - 1) + 1;
         mCount = 20;
@@ -144,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 mCardViewFlipper.setDisplayedChild(mCardSuit - 1);
                 mNumberViewFlipper.setDisplayedChild(mCardNumber - 1);
+                mClickable = true;
             }
         }
 
