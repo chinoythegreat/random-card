@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">Random Card Generator</string>
     <string name="action_settings">Settings</string>
+    <string-array name="cards_array">
+        <item>Clubs</item>
+        <item>Diamonds</item>
+        <item>Hearts</item>
+        <item>Spades</item>
+    </string-array>
+    <string-array name="card_number_array">
+        <item>Ace</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+        <item>Seven</item>
+        <item>Eight</item>
+        <item>Nine</item>
+        <item>Ten</item>
+        <item>Jack</item>
+        <item>Queen</item>
+        <item>King</item>
+    </string-array>
 </resources>
