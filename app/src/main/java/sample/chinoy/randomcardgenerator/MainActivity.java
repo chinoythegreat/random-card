@@ -193,6 +193,13 @@ public class MainActivity extends AppCompatActivity {
             Card card = cardList.get(position);
             holder.cardNumber.setText(mCardNumberStrings[card.getcardNumber() - 1]);
             holder.cardSuit.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, mCardSuitDrawables[card.getCardSuit() - 1]));
+            if(card.getCardSuit() - 1 == 0 || card.getCardSuit() - 1 == 3) {
+                holder.cardNumber.setTextColor(getColor(android.R.color.black));
+                holder.ofLabel.setTextColor(getColor(android.R.color.black));
+            } else {
+                holder.cardNumber.setTextColor(getColor(android.R.color.holo_red_dark));
+                holder.ofLabel.setTextColor(getColor(android.R.color.holo_red_dark));
+            }
         }
 
         @Override
@@ -206,11 +213,13 @@ public class MainActivity extends AppCompatActivity {
 
         public class CardViewHolder extends RecyclerView.ViewHolder {
             protected TextView cardNumber;
+            protected TextView ofLabel;
             protected ImageView cardSuit;
 
             public CardViewHolder(View view) {
                 super(view);
                 cardNumber = (TextView) view.findViewById(R.id.card_number);
+                ofLabel = (TextView) view.findViewById(R.id.of_label);
                 cardSuit = (ImageView) view.findViewById(R.id.card_suit);
             }
         }
