@@ -17,12 +17,4 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="AppTheme.Base" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="actionOverflowButtonStyle">@style/OverFlow</item>
-    </style>
-
-    <style name="OverFlow" parent="Widget.AppCompat.ActionButton.Overflow">
-        <item name="android:src">@drawable/ic_list_24</item>
-    </style>
-
 </resources>
