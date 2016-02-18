@@ -2,10 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="sample.chinoy.randomcardgenerator.MainActivity">
-    <item android:id="@+id/list"
+    <item
+        android:id="@+id/action_list"
         android:icon="@drawable/ic_list"
-        android:title="list"
-        app:showAsAction="ifRoom"
+        android:menuCategory="secondary"
         android:orderInCategory="1"
-        android:menuCategory="secondary"/>
+        android:title="list"
+        app:showAsAction="ifRoom" />
 </menu>
